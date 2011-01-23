@@ -28,9 +28,9 @@ module PostmasterGeneral
 
     ActionMailer::Base.deliveries[before_index..-1].each do |mail|
       File.open(log_path, "w+") do |f|
-        f << "=================="
+        f << "==================\r\n"
         f << mail.encoded
-        f << "=================="
+        f << "==================\r\n"
       end
     end
   end
