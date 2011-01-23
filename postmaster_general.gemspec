@@ -27,6 +27,7 @@ Gem::Specification.new do |s|
     "Rakefile",
     "VERSION",
     "lib/postmaster_general.rb",
+    "postmaster_general.gemspec",
     "spec/postmaster_general_spec.rb",
     "spec/spec_helper.rb"
   ]
