@@ -1,6 +1,28 @@
 = postmaster_general
 
-Description goes here.
+A little utility to log emails sent in a block of code (best used in isolation and tests)
+
+    #set the log directory
+    PostmasterGeneral.log_directory = "/some/arbitrary/path"
+    
+    #in a test
+    PostmasterGeneral.log_deliveries("a_delivery.txt") do
+      UserActivation.notification.deliver
+    end
+
+The user activation notification email that was sent via the actionmailer class will be logged to
+
+    /some/arbitrary/path/a_delivery.txt
+
+== Installing
+
+Add postmaster_general to your Gemfile:
+
+    gem "postmaster_general"
+
+Then run bundle install:
+
+    bundle install 
 
 == Contributing to postmaster_general
  
