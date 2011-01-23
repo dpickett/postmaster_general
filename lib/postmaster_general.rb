@@ -1,8 +1,8 @@
-require "actionmailer"
-
+require 'action_mailer'
+require 'configatron'
 require 'fileutils'
 
-module PostmasterGeneral do
+module PostmasterGeneral
   def self.log_directory=(path)
     configatron.postmaster_general.log_directory = path
   end
@@ -17,7 +17,7 @@ module PostmasterGeneral do
 
     yield
 
-    log_path = log_directory.join(path)
+    log_path = File.join(log_directory, path)
 
     FileUtils.mkdir_p(File.dirname(log_path))
     FileUtils.rm_f(log_path)
@@ -31,5 +31,3 @@ module PostmasterGeneral do
     end
   end
 end
-  
-
