@@ -29,8 +29,8 @@ module PostmasterGeneral
     ActionMailer::Base.deliveries[before_index..-1].each do |mail|
       File.open(log_path, "w+") do |f|
         f << "==================\r\n"
-        f << mail.encoded
-        f << "==================\r\n"
+        f << (mail.encoded.respond_to?(:force_encoding) ? mail.encoded.force_encoding("UTF-8") : mail.encoded)
+        f << "\r\n==================\r\n"
       end
     end
   end

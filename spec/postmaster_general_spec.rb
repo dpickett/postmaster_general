@@ -38,7 +38,7 @@ describe "PostmasterGeneral" do
     it "fills the log file in with the mail's encoded value" do
       mail = perform_delivery
 
-      File.read(TEST_LOG_PATH + "/#{log_file_name}").should =~ /#{Regexp.escape(mail.encoded)}/
+      File.read(TEST_LOG_PATH + "/#{log_file_name}").should =~ /#{Regexp.escape(mail.encoded.force_encoding("UTF-8"))}/
     end
   end
 
