@@ -1,1 +1,1 @@
-rvm gemset use ree@postmaster_general --create
+rvm use ree@postmaster_general --create
