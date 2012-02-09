@@ -45,7 +45,7 @@ Gem::Specification.new do |s|
     s.specification_version = 3
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
-      s.add_runtime_dependency(%q<actionmailer>, ["~> 3.0"])
+      s.add_runtime_dependency(%q<actionmailer>, [">= 3.0"])
       s.add_runtime_dependency(%q<configatron>, [">= 0"])
       s.add_development_dependency(%q<rspec>, ["~> 2.1"])
       s.add_development_dependency(%q<yard>, ["~> 0.6.0"])
@@ -55,7 +55,7 @@ Gem::Specification.new do |s|
       s.add_development_dependency(%q<reek>, ["~> 1.2.8"])
       s.add_development_dependency(%q<roodi>, ["~> 2.1.0"])
     else
-      s.add_dependency(%q<actionmailer>, ["~> 3.0"])
+      s.add_dependency(%q<actionmailer>, [">= 3.0"])
       s.add_dependency(%q<configatron>, [">= 0"])
       s.add_dependency(%q<rspec>, ["~> 2.1"])
       s.add_dependency(%q<yard>, ["~> 0.6.0"])
@@ -66,7 +66,7 @@ Gem::Specification.new do |s|
       s.add_dependency(%q<roodi>, ["~> 2.1.0"])
     end
   else
-    s.add_dependency(%q<actionmailer>, ["~> 3.0"])
+    s.add_dependency(%q<actionmailer>, [">= 3.0"])
     s.add_dependency(%q<configatron>, [">= 0"])
     s.add_dependency(%q<rspec>, ["~> 2.1"])
     s.add_dependency(%q<yard>, ["~> 0.6.0"])
